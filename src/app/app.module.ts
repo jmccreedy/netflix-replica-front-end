@@ -3,16 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {VideosComponent} from "./videos.component";
+import {HttpClientModule} from "@angular/common/http";
+import {WebService} from "./web.service";
+import {RouterModule} from "@angular/router";
+import {HomeComponent} from "./home.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
+let routes: any = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'videos',
+    component: VideosComponent
+  }
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VideosComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, HttpClientModule,
+    AppRoutingModule, RouterModule.forRoot(routes), ReactiveFormsModule
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {WebService} from "./web.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_app';
+  videoList: any = [];
+  blobAccount: any;
+
+  constructor(public webService: WebService) {
+  }
 }
