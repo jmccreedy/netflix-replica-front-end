@@ -20,7 +20,13 @@ export class HomeComponent {
         FileName: ['', Validators.required],
         userID: ['', Validators.required],
         userName: ['', Validators.required],
-        UpFile: ['', Validators.required]
+        UpFile: ['', Validators.required],
+        title: ['', Validators.required],
+        publisher: ['', Validators.required],
+        producer: ['', Validators.required],
+        genre: ['', Validators.required],
+        ageRating: ['', Validators.required],
+
       }
     )
   }

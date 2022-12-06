@@ -17,6 +17,31 @@
   </div>
 
   <div class="form-group">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" formControlName="title">
+  </div>
+
+  <div class="form-group">
+    <label for="publisher" class="form-label">Publisher</label>
+    <input type="text" class="form-control" id="publisher" formControlName="publisher">
+  </div>
+
+  <div class="form-group">
+    <label for="producer" class="form-label">Producer</label>
+    <input type="text" class="form-control" id="producer" formControlName="producer">
+  </div>
+
+  <div class="form-group">
+    <label for="genre" class="form-label">Genre</label>
+    <input type="text" class="form-control" id="genre" formControlName="genre">
+  </div>
+
+  <div class="form-group">
+    <label for="ageRating" class="form-label">Age rating</label>
+    <input type="text" class="form-control" id="ageRating" formControlName="ageRating">
+  </div>
+
+  <div class="form-group">
     <label for="UpFile" class="form-label">File to Upload</label>
     <input type="file" class="form-control" id="UpFile" formControlName="UpFile" (change)="onFileSelected($event)">
   </div>

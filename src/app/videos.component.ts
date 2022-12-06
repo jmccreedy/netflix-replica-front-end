@@ -16,7 +16,6 @@ export class VideosComponent {
 
   ngOnInit() {
     this.videoList = this.webService.getVideos()
-    this.blobAccount = "https://netflixreplica.blob.core.windows.net";
   }
 
   getVideoTag(filePath: string){
