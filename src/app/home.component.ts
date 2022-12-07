@@ -17,7 +17,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.videoForm = this.formBuilder.group({
-        FileName: ['', Validators.required],
+        fileName: ['', Validators.required],
         userID: ['', Validators.required],
         userName: ['', Validators.required],
         UpFile: ['', Validators.required],
@@ -36,7 +36,6 @@ export class HomeComponent {
   }
 
   onSubmit() {
-    console.log(this.videoForm)
     this.webService.postVideo(this.videoForm, this.selectedFile)
   }
 
