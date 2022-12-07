@@ -8,7 +8,7 @@
             {{video.valueOf()['fileName']}}
           </div>
           <div class="card-body">
-            <img [src]="[getVideoTag(video['filePath'])]" width='400' alt="example image"/>
+            <video controls [src]="[getVideoTag(video['filePath'])]" width='400'></video>
           </div>
           <div class="card-footer">
             Comments<br><hr>

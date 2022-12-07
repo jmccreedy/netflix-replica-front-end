@@ -18,9 +18,6 @@ export class VideosComponent {
 
   ngOnInit() {
     this.videoList = this.webService.getVideos()
-<<<<<<< Updated upstream
-    this.blobAccount = "https://netflixreplica.blob.core.windows.net";
-=======
 
     this.commentForm = this.formBuilder.group({
         comment: ['', Validators.required],
@@ -31,7 +28,6 @@ export class VideosComponent {
 
   onSubmit(id:any) {
     this.webService.postComment(this.commentForm, id)
->>>>>>> Stashed changes
   }
 
   getVideoTag(filePath: string){
