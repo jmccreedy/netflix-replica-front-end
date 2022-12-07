@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {VideosComponent} from "./videos.component";
 import {HttpClientModule} from "@angular/common/http";
@@ -28,7 +27,7 @@ let routes: any = [
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule, RouterModule.forRoot(routes), ReactiveFormsModule
+    RouterModule.forRoot(routes), ReactiveFormsModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent]

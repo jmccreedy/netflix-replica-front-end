@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {WebService} from "./web.service";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'videos',
@@ -9,14 +10,28 @@ import {WebService} from "./web.service";
 export class VideosComponent {
   title = 'angular_app';
   videoList: any = [];
+  commentForm: any;
   blobAccount: any;
 
-  constructor(public webService: WebService) {
+  constructor(public webService: WebService, private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
     this.videoList = this.webService.getVideos()
+<<<<<<< Updated upstream
     this.blobAccount = "https://netflixreplica.blob.core.windows.net";
+=======
+
+    this.commentForm = this.formBuilder.group({
+        comment: ['', Validators.required],
+        rating: ['', Validators.required]
+      }
+    )
+  }
+
+  onSubmit(id:any) {
+    this.webService.postComment(this.commentForm, id)
+>>>>>>> Stashed changes
   }
 
   getVideoTag(filePath: string){
