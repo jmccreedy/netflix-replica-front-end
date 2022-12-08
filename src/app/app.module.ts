@@ -12,11 +12,11 @@ import {ReactiveFormsModule} from "@angular/forms";
 let routes: any = [
   {
     path: '',
-    component: HomeComponent
+    component: VideosComponent
   },
   {
-    path: 'videos',
-    component: VideosComponent
+    path: 'addVideo',
+    component: HomeComponent
   }
 ];
 @NgModule({

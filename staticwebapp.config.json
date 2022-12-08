@@ -4,5 +4,11 @@
   },
   "mimeTypes": {
     ".json": "text/json"
-  }
+  },
+  "routes": [
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/github"
+    }
+  ]
 }
