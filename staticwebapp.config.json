@@ -7,7 +7,7 @@
   },
   "routes": [
     {
-      "route": "/login",
+      "route": "",
       "rewrite": "/.auth/login/github"
     }
   ]
