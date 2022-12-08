@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {WebService} from "./web.service";
 import {FormBuilder, Validators} from "@angular/forms";
+import {map} from "rxjs";
 
 @Component({
   selector: 'videos',
@@ -10,6 +11,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 export class VideosComponent {
   title = 'angular_app';
   videoList: any = [];
+  userList: any = [];
   commentForm: any;
   blobAccount: any;
 
@@ -18,6 +20,7 @@ export class VideosComponent {
 
   ngOnInit() {
     this.videoList = this.webService.getVideos()
+    this.userList = this.webService.getUsers()
 
     this.commentForm = this.formBuilder.group({
         comment: ['', Validators.required],

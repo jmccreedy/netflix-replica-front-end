@@ -17,7 +17,6 @@ export class HomeComponent {
 
   ngOnInit() {
     this.videoForm = this.formBuilder.group({
-        fileName: ['', Validators.required],
         userID: ['', Validators.required],
         userName: ['', Validators.required],
         UpFile: ['', Validators.required],

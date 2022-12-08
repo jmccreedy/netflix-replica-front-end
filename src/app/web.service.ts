@@ -11,6 +11,11 @@ export class WebService {
     return this.http.get(`https://prod-09.centralus.logic.azure.com/workflows/393f7345e2494c0bb208f70b41281498/triggers/manual/paths/invoke/rest/v1/videos?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=o_qJN7MJn_8CDUjTlWF0M1tqHW_08jqkI7mAp1o9ReA`)
   }
 
+  getUsers() {
+    return this.http.get(`https://prod-20.centralus.logic.azure.com:443/workflows/17cf7938754a4d0cbdf462495522a6ac/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rYDTnrnHOOwlk84XqPleyAB1JEUPlU0WAuaHjEVm3eI`)
+
+  }
+
   getVideo(id: any){
     return this.http.get(`https://prod-04.centralus.logic.azure.com/workflows/bd134140ded9448fb10e115eb74d1559/triggers/manual/paths/invoke/rest/v1/videos/${id}?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iSwzUhYRBsgdHUIiHdMsxBE_iu-sW2Brn00_-DsjR44`)
   }
@@ -19,7 +24,6 @@ export class WebService {
     let postUrl: string = "https://prod-16.centralus.logic.azure.com:443/workflows/6147787bc1554f7183d271a5a808d3ee/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aXt3hU1AiFJM9KxGHukcWG0MYAvilomLwf1sJpGhl_4";
     let postData = new FormData();
 
-    postData.append("fileName", video.get('fileName').value);
     postData.append("userID", video.get('userID').value);
     postData.append("userName", video.get('userName').value);
     postData.append("title", video.get('title').value);
